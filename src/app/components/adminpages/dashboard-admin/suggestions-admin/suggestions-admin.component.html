@@ -1,0 +1,35 @@
+<div class="pantalla-sugerencias">
+    <div class="fondo-sugerencias">
+        <div class="mostrar-sugerencias">
+            <div class="individual-sugerencias" *ngFor="let sugerencia of sugerencias">
+                <div class="sugerencia-content">
+                    <div class="image-user">
+                        <img [src]="recuperarUrlImage(sugerencia.name, sugerencia.lastName)" alt={{sugerencia.name}} width="100px">
+                    </div>
+                    <div class="comment-suggest">
+                        <div class="comment-header">
+                            <p class="nombre-sugerencia">
+                                {{sugerencia.name}} {{sugerencia.lastName}}     
+                            </p>
+                            <mat-icon>email</mat-icon>
+                            <p class="correo-sugerencia">
+                                
+                                {{sugerencia.email}}
+                            </p>
+                            
+                        </div>
+                      
+                        <p>
+                            <b>Sección: </b> {{sugerencia.section}}  <br>
+                            <b>Comentario: </b> {{sugerencia.comment}}
+                        </p>
+                      
+                    </div>
+                    <div class="action-suggest">
+                        <button mat-raised-button color="primary" (click)="deleteSuggestById(sugerencia.id)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

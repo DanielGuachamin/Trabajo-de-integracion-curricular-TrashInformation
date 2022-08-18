@@ -1,0 +1,55 @@
+.fondo-news {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.mostrar-news {
+    border-right: groove 1px #47AF49;
+    padding-right: 2.5rem;
+    width: 950px;
+}
+
+.formulario-news {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 15rem;
+}
+
+.file-name {
+    margin-left: 1rem;
+}
+
+.news-text{
+    width: 400px;
+}
+
+mat-card-content{
+    margin: 0 16px;
+}
+
+.news-image{
+    padding: 1rem;
+    width: 450px;
+}
+
+.news-card{
+    max-width: 950px;
+    margin-bottom: 1rem;
+}
+
+.news-content {
+    display: flex;
+}
+
+.mat-icon{
+    height: 40px;
+    width: 40px;
+    font-size: 45px;
+    margin: 0.1rem 6rem;
+}
+
+p{
+    text-align: justify;
+}

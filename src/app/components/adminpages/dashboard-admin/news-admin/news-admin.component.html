@@ -1,0 +1,220 @@
+<div class="pantalla-news">
+    <div class="fondo-news">
+        <div class="mostrar-news">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Medio Ambiente">
+                    <div class="individual-news" *ngFor="let noticia of (noticias | newsfilter:'MedioAmbiente')">
+                        <mat-card class="news-card">
+                            <div class="news-content">
+                                <div class="news-text">
+                                    <mat-card-header>
+
+                                        <mat-card-title>{{noticia.title}}</mat-card-title>
+                                        <mat-card-subtitle>{{noticia.category}}</mat-card-subtitle>
+                                    </mat-card-header>
+
+                                    <mat-card-content>
+                                        <p>
+                                            {{noticia.description}}
+                                        </p>
+                                    </mat-card-content>
+                                </div>
+                                <div class="news-image">
+                                    <img mat-card-image [src]="noticia.noticiaPic" alt={{noticia.title}} width="300"
+                                        height="180">
+                                    <div class="fuente">
+                                        <p>
+                                            Autor: <b>{{noticia.author}}</b>
+                                            <br>
+                                            Fuente: <a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <mat-card-actions>
+                                <button mat-raised-button color="warn"
+                                    (click)="deleteNoticiaById(noticia.id)">Eliminar</button>
+                                <button mat-raised-button color="accent"
+                                    (click)="fillFormNoticia(noticia.id)">Modificar</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Orgánicos">
+                    <div class="individual-news" *ngFor="let noticia of (noticias | newsfilter:'Orgánicos')">
+                        <mat-card class="news-card">
+                            <div class="news-content">
+                                <div class="news-text">
+                                    <mat-card-header>
+                                        <mat-card-title>{{noticia.title}}</mat-card-title>
+                                        <mat-card-subtitle>{{noticia.category}}</mat-card-subtitle>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <p>
+                                            {{noticia.description}}
+                                        </p>
+                                    </mat-card-content>
+                                </div>
+                                <div class="news-image">
+                                    <img mat-card-image [src]="noticia.noticiaPic" alt={{noticia.title}} width="300"
+                                        height="180">
+                                    <div class="fuente">
+                                        <p>
+                                            Autor: <b>{{noticia.author}}</b>
+                                            <br>
+                                            Fuente: <a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <mat-card-actions>
+                                <button mat-raised-button color="warn"
+                                    (click)="deleteNoticiaById(noticia.id)">Eliminar</button>
+                                <button mat-raised-button color="accent"
+                                    (click)="fillFormNoticia(noticia.id)">Modificar</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Reciclaje">
+                    <div class="individual-news" *ngFor="let noticia of (noticias | newsfilter:'Reciclaje')">
+                        <mat-card class="news-card">
+                            <div class="news-content">
+                                <div class="news-text">
+                                    <mat-card-header>
+
+                                        <mat-card-title>{{noticia.title}}</mat-card-title>
+                                        <mat-card-subtitle>{{noticia.category}}</mat-card-subtitle>
+                                    </mat-card-header>
+
+                                    <mat-card-content>
+                                        <p>
+                                            {{noticia.description}}
+                                        </p>
+                                    </mat-card-content>
+                                </div>
+                                <div class="news-image">
+                                    <img mat-card-image [src]="noticia.noticiaPic" alt={{noticia.title}} width="300"
+                                        height="180">
+                                    <div class="fuente">
+                                        <p>
+                                            Autor: <b>{{noticia.author}}</b>
+                                            <br>
+                                            Fuente: <a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <mat-card-actions>
+                                <button mat-raised-button color="warn"
+                                    (click)="deleteNoticiaById(noticia.id)">Eliminar</button>
+                                <button mat-raised-button color="accent"
+                                    (click)="fillFormNoticia(noticia.id)">Modificar</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Covid 19">
+                    <div class="individual-news" *ngFor="let noticia of (noticias | newsfilter:'Covid19')">
+                        <mat-card class="news-card">
+                            <div class="news-content">
+                                <div class="news-text">
+                                    <mat-card-header>
+
+                                        <mat-card-title>{{noticia.title}}</mat-card-title>
+                                        <mat-card-subtitle>{{noticia.category}}</mat-card-subtitle>
+                                    </mat-card-header>
+
+                                    <mat-card-content>
+                                        <p>
+                                            {{noticia.description}}
+                                        </p>
+                                    </mat-card-content>
+                                </div>
+                                <div class="news-image">
+                                    <img mat-card-image [src]="noticia.noticiaPic" alt={{noticia.title}} width="300"
+                                        height="180">
+                                    <div class="fuente">
+                                        <p>
+                                            Autor: <b>{{noticia.author}}</b>
+                                            <br>
+                                            Fuente: <a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <mat-card-actions>
+                                <button mat-raised-button color="warn"
+                                    (click)="deleteNoticiaById(noticia.id)">Eliminar</button>
+                                <button mat-raised-button color="accent"
+                                    (click)="fillFormNoticia(noticia.id)">Modificar</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+            <div class="individual-news" *ngFor="let noticia of noticias">
+
+
+            </div>
+        </div>
+        <div class="formulario-news">
+            <form [formGroup]="formNoticia" (ngSubmit)="onSubmitAddNoticia()" class="formulario-news">
+                <mat-form-field appearance="standard">
+                    <mat-label>Título</mat-label>
+                    <input type="text" matInput placeholder="Ingrese un título" class="form-control"
+                        formControlName="title">
+                    <mat-error *ngIf="title.invalid && (title.dirty || title.touched)">{{getErrorMessageTitle()}}
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="standard">
+                    <mat-label>Categoría</mat-label>
+                    <mat-select class="form-control" formControlName="category">
+                        <mat-option value="MedioAmbiente">Medio ambiente</mat-option>
+                        <mat-option value="Orgánicos">Orgánicos</mat-option>
+                        <mat-option value="Reciclaje">Reciclaje</mat-option>
+                        <mat-option value="Covid19">Covid 19</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="category.invalid && (category.dirty || category.touched)">
+                        {{getErrorMessageCategory()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="mt-3" appearance="standard">
+                    <mat-label>Autor</mat-label>
+                    <input type="text" matInput placeholder="Ingrese un autor" class="form-control"
+                        formControlName="author">
+                    <mat-error *ngIf="author.invalid && (author.dirty || author.touched)">{{getErrorMessageAuthor()}}
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="standard">
+                    <mat-label>Descripción</mat-label>
+                    <textarea type="text" matInput #input maxlength="380" placeholder="Ingrese una descripción" class="form-control"
+                        formControlName="description"></textarea>
+                        <mat-hint align="end">{{input.value?.length || 0}}/380</mat-hint>
+                    <mat-error *ngIf="description.invalid && (description.dirty || description.touched)">
+                        {{getErrorMessageDescription()}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mt-3" appearance="standard">
+                    <mat-label>Fuente bibliográfica</mat-label>
+                    <input type="text" matInput placeholder="Ingrese una referencia" class="form-control"
+                        formControlName="url">
+                    <mat-error *ngIf="url.invalid && (url.dirty || url.touched)">{{getErrorMessageUrl()}}</mat-error>
+                </mat-form-field>
+
+                <mat-icon class="mt-4">image</mat-icon>
+                <button type="button" mat-raised-button (click)="fileInput.click()">Agregar Imagen (Opcional)</button>
+                <input hidden (change)="uploadNoticiaImage($event)" #fileInput type="file">
+                <span class="file-name">{{selectedFile?.name}}</span>
+
+                <button class="mt-2" mat-raised-button color="primary"
+                    [disabled]="title.invalid || category.invalid || author.invalid || description.invalid || url.invalid">Guardar</button>
+            </form>
+            <button class="mt-2" mat-raised-button color="primary" (click)="clearForm()">Limpiar Formulario</button>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.fondo-err {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../../assets/AplicacionWebFondo.jpg);
+}
+
+.contenedor-err{
+    text-align: center;
+    
+}
+
+.header-err{
+    padding-bottom: 2rem;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: revert;
+    font-family: initial;
+}
+
+.contenido-err{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p{
+    font-size: 30px;
+    font-family: initial;
+}

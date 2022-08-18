@@ -1,0 +1,51 @@
+.pantalla-login{
+    height:100vh;
+    width:100%;
+    text-align:center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fondo-login{
+    height: auto;
+    width: 575px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #153243;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+mat-form-field.mat-form-field {
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.dividir-formulario-botones {
+    background: #47AF49;
+    height: 5px;
+    width: auto;
+    margin: 1rem;
+}
+
+button{
+    margin: 0.2rem 11rem;
+    font-size: 16px;
+    color: white;
+}
+
+.botones-accion-login {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+}

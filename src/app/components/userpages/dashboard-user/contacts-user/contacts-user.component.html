@@ -1,0 +1,56 @@
+<div class="pantalla-contactos">
+    <div class="fondo-contactos">
+        <div class="mapa">
+            <div class="header-mapa">
+                <h1>
+                    Mapa interactivo por zonas de recolección
+                </h1>
+                <button mat-raised-button (click)="openDialog()">Cómo usarlo</button>
+            </div>
+            <h3>
+                Busca en el mapa la zona en que resides y podrás visualizar información importante
+sobre el servicio de recolección de basura.
+            </h3>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1BZPF3nfB5_hEXaFTcf4zTlIILa4&ehbc=2E312F" width="750" height="500"></iframe>
+        </div>
+        <div class="listado-contactos">
+            <h1>
+                Listado de recicladores
+            </h1>
+            <h3>
+                Apoya a personas que hacen reciclaje en las calles donando chatarra o material reciclable
+            </h3>
+            <mat-list class="individual-contacto" *ngFor="let contacto of contactos">
+                <mat-list-item >
+                    <p>
+                        <b> Servicio:</b> <br>
+                    {{contacto.activity}}
+                    </p>
+                                    </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <p>
+                        <b> Nombre: </b> <br>
+                        {{contacto.name}}  {{contacto.lastName}}
+                    </p>                 
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <p>
+                        <b> Dirección: </b> <br>
+                        {{contacto.address}}
+                    </p>      
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <p>
+                        <b> Número de contacto: </b> <br>
+                        {{contacto.phoneNumber}}
+                    </p>  
+                </mat-list-item>
+                <mat-divider></mat-divider>
+              </mat-list>
+           
+        </div>
+    </div>
+</div>

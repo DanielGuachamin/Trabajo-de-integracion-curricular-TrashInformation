@@ -1,0 +1,21 @@
+<mat-toolbar >
+  <mat-toolbar-row class="user-header">
+    <div class="name-header">
+
+      <img src="../../../../assets/Nombre-trashinformation.png" alt="Nombre trashinformation" width="400px" height="40px">
+    </div>
+  <div class="perfil-button">
+    <button mat-flat-button color="primary" routerLink="/dashboard-user/profile-user">Mi Perfil</button>
+  </div>
+  <img [src]="(urlProfilePic$ | async) ? (urlProfilePic$ | async) : '../../../../assets/Logo-trashinformation.png'" alt="Logo trashinformation" width="100px" height="80px">
+  </mat-toolbar-row>
+  <mat-toolbar-row class="user-menu">
+    <button mat-flat-button color="primary" routerLink="/dashboard-user">Inicio</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-user/recommendations-user">Maneja tus desechos</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-user/videos-user">Videos</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-user/news-user">Noticias</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-user/suggestions-user">Contáctanos</button>
+  </mat-toolbar-row>
+    
+  </mat-toolbar>
+  <router-outlet></router-outlet>

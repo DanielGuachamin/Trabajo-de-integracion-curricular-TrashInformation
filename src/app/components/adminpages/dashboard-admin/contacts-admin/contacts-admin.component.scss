@@ -1,0 +1,38 @@
+.fondo-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 2rem;
+}
+
+.formulario-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 15rem;
+}
+
+.mostrar-contacts {
+  border-right: groove 1px #47AF49;
+  padding-right: 2.5rem;
+}
+
+.filter{
+  display: inline;
+}
+
+table {
+  width: 950px;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  padding-right: 20px;
+}
+
+.accionButton{
+  width: 100px;
+}
+
+button{
+  margin-right: 5px;
+}

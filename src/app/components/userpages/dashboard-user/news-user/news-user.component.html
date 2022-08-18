@@ -1,0 +1,162 @@
+<div class="pantalla-noticias">
+    <div class="fondo-noticias">
+        <mat-tab-group mat-align-tabs="center" class="grupo-labels">
+            <mat-tab label="Medio Ambiente" class="tab-content-news">
+                <div class="header-tab">
+                    <div class="header-title">
+                        <h2>
+                            Infórmate y cuida nuestro planeta con las noticias más actuales
+                        </h2>
+                    </div>
+                    <div class="header-buttons">
+                        <button mat-fab color="primary" (click)="aumentarTexto()">
+                            <mat-icon>text_increase</mat-icon>
+                        </button>
+                        <button mat-fab color="warn" (click)="reducirTexto()">
+                            <mat-icon>text_decrease</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let noticia of (noticias | newsfilter:'MedioAmbiente')">
+                        <mat-card class="example-card" [style.height.px]="height">
+                            <mat-card-title-group>
+                                <mat-card-title>{{noticia.title}}</mat-card-title>
+                                <img mat-card-lg-image [src]="noticia.noticiaPic" alt={{noticia.title}}>
+                            </mat-card-title-group>
+                            <mat-card-content [style.font-size.px]="fontSize">
+                                <p>
+                                    {{noticia.description}}
+                                </p>
+                                <div class="fuente">
+                                    <p>
+                                        Autor: <b>{{noticia.author}}</b>
+                                        <br>
+                                        Fuente:<a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Reciclaje">
+                <div class="header-tab">
+                    <div class="header-title">
+                        <h2>
+                            Infórmate y cuida nuestro planeta con las noticias más actuales
+                        </h2>
+                    </div>
+                    <div class="header-buttons">
+                        <button mat-fab color="primary" (click)="aumentarTexto()">
+                            <mat-icon>text_increase</mat-icon>
+                        </button>
+                        <button mat-fab color="warn" (click)="reducirTexto()">
+                            <mat-icon>text_decrease</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let noticia of (noticias | newsfilter:'Reciclaje')">
+                        <mat-card class="example-card">
+                            <mat-card-title-group>
+                                <mat-card-title>{{noticia.title}}</mat-card-title>
+                                <img mat-card-lg-image [src]="noticia.noticiaPic" alt={{noticia.title}}>
+                            </mat-card-title-group>
+                            <mat-card-content [style.font-size.px]="fontSize">
+                                <p>
+                                    {{noticia.description}}
+                                </p>
+                                <div class="fuente">
+                                    <p>
+                                        Autor: <b>{{noticia.author}}</b>
+                                        <br>
+                                        Fuente:<a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Residuos Orgánicos">
+                <div class="header-tab">
+                    <div class="header-title">
+                        <h2>
+                            Infórmate y cuida nuestro planeta con las noticias más actuales
+                        </h2>
+                    </div>
+                    <div class="header-buttons">
+                        <button mat-fab color="primary" (click)="aumentarTexto()">
+                            <mat-icon>text_increase</mat-icon>
+                        </button>
+                        <button mat-fab color="warn" (click)="reducirTexto()">
+                            <mat-icon>text_decrease</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let noticia of (noticias | newsfilter:'Orgánicos')">
+                        <mat-card class="example-card">
+                            <mat-card-title-group>
+                                <mat-card-title>{{noticia.title}}</mat-card-title>
+                                <img mat-card-lg-image [src]="noticia.noticiaPic" alt={{noticia.title}}>
+                            </mat-card-title-group>
+                            <mat-card-content [style.font-size.px]="fontSize">
+                                <p>
+                                    {{noticia.description}}
+                                </p>
+                                <div class="fuente">
+                                    <p>
+                                        Autor: <b>{{noticia.author}}</b>
+                                        <br>
+                                        Fuente:<a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Desechos Covid-19">
+                <div class="header-tab">
+                    <div class="header-title">
+                        <h2>
+                            Infórmate y cuida nuestro planeta con las noticias más actuales
+                        </h2>
+                    </div>
+                    <div class="header-buttons">
+                        <button mat-fab color="primary" (click)="aumentarTexto()">
+                            <mat-icon>text_increase</mat-icon>
+                        </button>
+                        <button mat-fab color="warn" (click)="reducirTexto()">
+                            <mat-icon>text_decrease</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let noticia of (noticias | newsfilter:'Covid19')">
+                        <mat-card class="example-card">
+                            <mat-card-title-group>
+                                <mat-card-title>{{noticia.title}}</mat-card-title>
+                                <img mat-card-lg-image [src]="noticia.noticiaPic" alt={{noticia.title}}>
+                            </mat-card-title-group>
+                            <mat-card-content [style.font-size.px]="fontSize">
+                                <p>
+                                    {{noticia.description}}
+                                </p>
+                                <div class="fuente">
+                                    <p>
+                                        Autor: <b>{{noticia.author}}</b>
+                                        <br>
+                                        Fuente:<a [href]="noticia.url" target="_blank">{{noticia.url}}</a>
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

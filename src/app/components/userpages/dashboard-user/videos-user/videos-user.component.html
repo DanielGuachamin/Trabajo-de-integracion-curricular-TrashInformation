@@ -1,0 +1,98 @@
+<div class="pantalla-videos">
+    <div class="fondo-videos">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Medio Ambiente">
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let video of (videos | videosfilter:'MedioAmbiente')">
+                        <mat-card class="example-card">
+                            <mat-card-header>
+                                <mat-card-title>{{video.title}}</mat-card-title>
+                                <mat-card-subtitle>{{video.category}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div class="video-image">
+                                    <youtube-player videoId={{video.urlID}} suggestedQuality="highres" [height]="250"
+                                        [width]="500" [startSeconds]="4" [endSeconds]="8">
+                                    </youtube-player>
+                                </div>
+                                <p>
+                                    Autor: <b>{{video.author}}</b>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Residuos Orgánicos">
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let video of (videos | videosfilter:'Orgánicos')">
+                        <mat-card class="example-card">
+                            <mat-card-header>
+                                <mat-card-title>{{video.title}}</mat-card-title>
+                                <mat-card-subtitle>{{video.category}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div class="video-image">
+                                    <youtube-player videoId={{video.urlID}} suggestedQuality="highres" [height]="250"
+                                        [width]="500" [startSeconds]="4" [endSeconds]="8">
+                                    </youtube-player>
+                                </div>
+                                <p>
+                                    Autor: <b>{{video.author}}</b>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Residuos Reciclables">
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let video of (videos | videosfilter:'Reciclaje')">
+                        <mat-card class="example-card">
+                            <mat-card-header>
+                                <mat-card-title>{{video.title}}</mat-card-title>
+                                <mat-card-subtitle>{{video.category}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div class="video-image">
+                                    <youtube-player videoId={{video.urlID}} suggestedQuality="highres" [height]="250"
+                                        [width]="500" [startSeconds]="4" [endSeconds]="8">
+                                    </youtube-player>
+                                </div>
+                                <p>
+                                    Autor: <b>{{video.author}}</b>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+            <mat-tab label="Residuos Covid-19">
+                <mat-grid-list cols="2" rowHeight="420px">
+                    <mat-grid-tile *ngFor="let video of (videos | videosfilter:'Covid19')">
+                        <mat-card class="example-card">
+                            <mat-card-header>
+                                <mat-card-title>{{video.title}}</mat-card-title>
+                                <mat-card-subtitle>{{video.category}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div class="video-image">
+                                    <youtube-player videoId={{video.urlID}} suggestedQuality="highres" [height]="250"
+                                        [width]="500" [startSeconds]="4" [endSeconds]="8">
+                                    </youtube-player>
+                                </div>
+                                <p>
+                                    Autor: <b>{{video.author}}</b>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

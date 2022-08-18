@@ -1,0 +1,46 @@
+.grupo-labels{
+    margin-top: -15px;
+}
+
+.header-tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 0.4rem;
+}
+
+.header-title {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 0.1rem 3rem;
+}
+
+.header-buttons{
+    position: absolute;
+    right: 0;
+}
+
+.individual-news{
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.example-card{
+    margin: 0 20px;
+}
+
+p{
+    text-align: justify;
+}
+
+mat-card-title{
+    line-height: normal;
+}
+
+mat-card-content{
+    margin-top: 0.5rem;
+}
+
+button{
+    margin: 0.1rem 1.5rem;
+}

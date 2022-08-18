@@ -1,0 +1,47 @@
+.fondo-videos {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.mostrar-videos {
+    column-count: 1;
+    border-right: groove 1px #47AF49;
+    padding-right: 2.5rem;
+    width: 950px;
+}
+
+.video-card {
+    max-width: 950px;
+    margin-bottom: 1rem;
+}
+
+.formulario-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 15rem;
+}
+
+.video-content {
+    display: flex;
+}
+
+.video-text{
+    width: 400px;
+}
+
+.video-image{
+    max-width: 500px;
+}
+
+mat-card-content{
+    margin: 0 16px;
+}
+
+.mat-icon{
+    height: 45px;
+    width: 45px;
+    font-size: 45px;
+    margin: 0.1rem 6rem;
+}

@@ -1,0 +1,38 @@
+.fondo-contactos{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+.listado-contactos {
+    margin-left: 2rem;
+    border-left: solid 1px;
+    padding-left: 2rem;
+    width: 500px;
+    height: 638px;
+    overflow: scroll;
+}
+
+.individual-contacto {
+    margin-bottom: 2rem;
+    border: solid 1px blue;
+}
+
+h1{
+    color: #51CC35
+}
+
+.header-mapa{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option{
+    height: auto;
+    margin: 0.2rem 0;
+}
+
+p{
+    text-align: justify; 
+}

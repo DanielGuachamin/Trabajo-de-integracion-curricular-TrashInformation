@@ -1,0 +1,32 @@
+.fondo-recomens {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 2rem;
+}
+
+.mostrar-recomens{
+    border-right: groove 1px #47AF49;
+    padding-right: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.formulario-recomens {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 15rem;
+}
+
+.recomen-card{
+    margin-bottom: 1rem;
+    max-width: 65%;
+}
+
+.contenedor{
+    margin: 1rem 0.9rem;
+}
+
+.centrado{
+    text-align: justify;
+}

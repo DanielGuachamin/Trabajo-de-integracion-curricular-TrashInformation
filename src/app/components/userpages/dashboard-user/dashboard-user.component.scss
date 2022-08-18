@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+
+.user-menu {
+ $special-primary: mat.define-palette(mat.$gray-palette, 900);
+ $special-accent: mat.define-palette(mat.$brown-palette);
+ $special-theme: mat.define-dark-theme((
+   color: (primary: $special-primary, accent: $special-accent),
+ ));
+
+ @include mat.button-color($special-theme);
+}
+
+.mat-toolbar-multiple-rows{
+    display: contents;
+}
+
+.perfil-button{
+    margin-right: 1rem;
+}
+
+.user-header{
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.name-header{
+    margin-right: 55%;
+}
+
+.user-menu {
+    background: #009387;
+    justify-content: space-evenly;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    margin-bottom: 1rem;
+}
+
+button{
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+img{
+    border-radius: 40px;
+}

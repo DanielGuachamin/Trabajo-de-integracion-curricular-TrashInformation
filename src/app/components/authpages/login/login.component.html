@@ -1,0 +1,29 @@
+<div class="pantalla-login" style=" background-image: url(../../../assets/AplicacionWebFondo.jpg)">
+    <div class="fondo-login">
+        <div>
+            <img src="../../../assets/FondoLogo-trashinformation.png" alt="trashinformation" width="550" height="210">
+        </div>
+        <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formulario-login">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="text" class="form-control" formControlName="email">
+                <mat-icon matPrefix>account_circle</mat-icon>
+                <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">{{getErrorMessageEmail()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput [type]="showPassword ? 'text' : 'password'" class="form-control" formControlName="password">
+                <mat-icon matPrefix>lock</mat-icon>
+                <mat-icon matSuffix (click)="seePassword()" color="primary">{{showPassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">{{getErrorMessagePassword()}}</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" >Iniciar Sesión</button>
+        </form>
+        <div class="dividir-formulario-botones"></div>
+        <div class="botones-accion-login">
+            <button mat-button (click)="openRecover()">Recuperar contraseña</button>
+            <button mat-raised-button color="primary" (click)="openRegister()">Registrarme</button>
+        </div>
+
+    </div>
+</div>

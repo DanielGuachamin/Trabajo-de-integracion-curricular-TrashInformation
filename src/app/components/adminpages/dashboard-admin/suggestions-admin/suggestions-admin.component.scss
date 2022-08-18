@@ -1,0 +1,63 @@
+.fondo-sugerencias {
+    margin: 0 2rem;
+}
+
+.sugerencia-content{
+    display: flex;
+   
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px #9697B7;
+}
+
+.comment-suggest{
+    width: 100%;
+}
+
+.image-user{
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.comment-header{
+    display: flex;
+    
+}
+
+.nombre-sugerencia{
+    font-size: 20px;
+    margin-right: 5rem;
+}
+.correo-sugerencia{
+    font-size: 15px;
+    margin-left: 1rem;
+}
+
+.formulario-sugerencias {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 15rem;
+}
+
+mat-card-content{
+    margin: 0 16px;
+}
+
+mat-card-content{
+    margin-bottom: 1rem;;
+}
+
+mat-icon{
+    font-size: 26px;
+    color: grey;
+}
+
+img {
+    border-radius: 50px;
+}
+
+p{
+    text-align: justify;
+}

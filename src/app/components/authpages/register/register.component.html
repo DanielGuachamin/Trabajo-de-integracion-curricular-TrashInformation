@@ -1,0 +1,68 @@
+<div class="pantalla-register" style=" background-image: url(../../../assets/AplicacionWebFondo.jpg)">
+  <div class="fondo-register">
+    <div class="header-register">
+      <h4>
+        Registrate
+      </h4>
+      <button mat-mini-fab color="primary" aria-label="close" (click)="closeRegister()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <p>
+      Es fácil y sencillo
+    </p>
+    <mat-divider></mat-divider>
+    <div class="content-register">
+      <form [formGroup]="formReg" (ngSubmit)="onSubmit()" class="formulario-register">
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" class="form-control" formControlName="name">
+          <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">{{getErrorMessageNameLastname()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Apellido</mat-label>
+          <input matInput type="text" class="form-control" formControlName="lastName">
+          <mat-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">{{getErrorMessageNameLastname()}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" class="form-control" formControlName="email">
+          <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">{{getErrorMessageEmail()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="showPassword ? 'text' : 'password'" class="form-control" formControlName="password">
+          <mat-icon matSuffix (click)="seePassword()" color="primary">{{showPassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+          <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">{{getErrorMessagePassword()}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="birthdate" [max]="maxDate" [min]="minDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+          <mat-error *ngIf="birthdate.invalid && (birthdate.dirty || birthdate.touched)">{{getErrorMessageBirthday()}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Dirección de domicilio</mat-label>
+          <mat-select class="form-control" formControlName="direccionBase">
+            <mat-option *ngFor="let direction of directionsMap" [value]="direction.key"> {{direction.value}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="direccionBase.invalid && (direccionBase.dirty || direccionBase.touched)">
+            {{getErrorMessageDirection()}}</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary"
+          [disabled]="email.invalid || password.invalid || name.invalid || lastName.invalid || direccionBase.invalid || birthdate.invalid">Registrarme</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<mat-toolbar class="admin-menu">
+    <button mat-flat-button color="primary" routerLink="/dashboard-admin">Noticias</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-admin/videos-admin">Videos</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-admin/recommendations-admin">Recomendaciones</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-admin/contacts-admin">Contactos</button>
+    <button mat-flat-button color="primary" routerLink="/dashboard-admin/suggestions-admin">Sugerencias</button>
+   
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+
+
+<div class="footer">
+  <button mat-fab color="warn" (click)="singOut()">
+    <mat-icon>logout</mat-icon>
+  </button>
+  <h2>
+    Cerrar sesión
+  </h2>
+</div>

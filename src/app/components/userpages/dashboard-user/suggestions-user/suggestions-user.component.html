@@ -1,0 +1,61 @@
+<div class="pantalla-sugerencias">
+    <div class="fondo-sugerencias">
+        <div class="form-sugerencia">
+            <div class="header-sugerencias">
+                <h2>
+                    Comentarios y Sugerencias | ¿Cómo lo estamos haciendo?
+                </h2>
+                <p>
+                    Sus ideas y opiniones son importantes para nosotros. Gracias a sus comentarios, 
+                    podemos identificar las áreas en que debemos mejorar. Puede realizar comentarios 
+                    y sugerencias del servicio de recolección de basura en su barrio o puede comentarnos 
+                    en que puede mejorar nuestra página web.
+                </p>
+            </div>
+            <form [formGroup]="formSuggest" (ngSubmit)="onSubmitAddSuggest()" class="formulario-sugerencias">
+                <mat-form-field appearance="fill">
+                    <mat-label>¿Su opinión es acerca de...?</mat-label>
+                    <input type="text" matInput placeholder="Ingrese el nombre de la sección a mejorar" class="form-control" formControlName="section">
+                    <mat-error *ngIf="section.invalid && (section.dirty || section.touched)">{{getErrorMessageSection()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Comentario</mat-label>
+                    <textarea matInput matInput placeholder="Ingresa tu comentario" class="form-control"
+                    formControlName="comment"></textarea>
+                    <mat-error *ngIf="comment.invalid && (comment.dirty || comment.touched)">{{getErrorMessageComment()}}</mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="section.invalid || comment.invalid">Enviar</button>
+            </form>
+        </div>
+        <div class="mostrar-sugerencias" *ngIf="sugerenciaByUser.length != 0">
+            <h2>
+                Tus comentarios:
+            </h2>
+            <div class="individual-sugerencia">
+                
+                  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                    <ng-container matColumnDef="seccion">
+                      <th mat-header-cell *matHeaderCellDef> Opinión acerca de </th>
+                      <td mat-cell *matCellDef="let element"> {{element.section}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="comentario">
+                      <th mat-header-cell *matHeaderCellDef> Comentario </th>
+                      <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="acciones">
+                      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                      <td mat-cell *matCellDef="let element"> 
+                        <button mat-raised-button color="warn" (click)="deleteSuggestById(element.id)">Eliminar comentario</button>
+                      </td>
+                    </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>

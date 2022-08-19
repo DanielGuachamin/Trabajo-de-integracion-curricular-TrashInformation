@@ -41,4 +41,4 @@ Para más detalles se recomienda revisar el [Manual de instalación](https://epn
 
 En esta sección se comparte un video que muestra a los desarrolladores del sistema y su funcionalidad a detalle:
 
-[Manual de usuario de TrashInformation](https://www.youtube.com/)
+[Manual de usuario de TrashInformation](https://youtu.be/xJ3VRup4Zes)

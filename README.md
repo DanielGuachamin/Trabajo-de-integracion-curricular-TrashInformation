@@ -13,7 +13,7 @@ Este manual técnico tiene la información necesaria que se utilizó para desarr
 - Prototipos
 - Pruebas no funcionales
 
-Para más detalle se recomienda revisar el [Manual técnico](https://epnecuador-my.sharepoint.com/:b:/g/personal/guillermo_guachamin_epn_edu_ec/ERIVQEJyKuJHub8p3K6pTVcB6I8kzpliZ4sC3CP-OQuopQ?e=iCfzzU)
+Para más detalle se recomienda revisar el [Manual técnico](https://epnecuador-my.sharepoint.com/:b:/g/personal/guillermo_guachamin_epn_edu_ec/EUksrpgMhsFOmQIJYA-IdeIBc5bz0v5R0vBuB87NOHTU0w?e=pW3paj)
 
 ## Manual de instalación
 
